@@ -12,7 +12,7 @@
 		"text": "/prison {id} 180 DeathMatch\n/warn {id} DeathMatch"
 	},
 	"osk": {
-		"desc": "[BAN] Оскорбление (120 мин). [ /osk ID REQ ]",
+		"desc": "[MUTE] Оскорбление (120 мин). [ /osk ID REQ ]",
 		"text": "/mute {id} 120 Оскорбление игроков"
 	}
 
