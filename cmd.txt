@@ -1,6 +1,19 @@
 {
 	"hax": {
-		"example": "[BAN] Читы (7 дн). [ /hax ID REQ ]",
+		"desc": "[BAN] Читы (7 дн). [ /hax ID REQ ]",
 		"text": "/ban {id} 7 Читы"
+	},
+	"osks": {
+		"desc": "[BAN] Оскорбление проекта (30 дн). [ /hax ID REQ ]",
+		"text": "/ban {id} 30 Оскорбления проекта"
+	},
+	"ddm": {
+		"desc": "[WARN] DM (180 мин). [ /ddm ID REQ ]",
+		"text": "/prison {id} 180 DeathMatch\n/warn {id} DeathMatch"
+	},
+	"osk": {
+		"desc": "[BAN] Оскорбление (120 мин). [ /osk ID REQ ]",
+		"text": "/mute {id} 120 Оскорбление игроков"
 	}
+
 }
