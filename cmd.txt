@@ -1,21 +1,21 @@
 [
 	{
-		"cmd": hax,
+		"cmd": "hax",
 		"desc": "[BAN] Читы (7 дн). [ /hax ID REQ ]",
 		"text": "/ban {id} 7 Читы"
 	},
 	{
-		"cmd": osks,
+		"cmd": "osks",
 		"desc": "[BAN] Оскорбление проекта (30 дн). [ /hax ID REQ ]",
 		"text": "/ban {id} 30 Оскорбления проекта"
 	},
 	{
-		"cmd": ddm,
+		"cmd": "ddm",
 		"desc": "[WARN] DM (180 мин). [ /ddm ID REQ ]",
 		"text": "/prison {id} 180 DeathMatch\n/warn {id} DeathMatch"
 	},
 	{
-		"cmd": osk,
+		"cmd": "osk",
 		"desc": "[MUTE] Оскорбление (120 мин). [ /osk ID REQ ]",
 		"text": "/mute {id} 120 Оскорбление игроков"
 	}
