@@ -1,0 +1,48 @@
+{
+	rn = {
+		desc = "Ответить и после закрыть вопрос.",
+		func = function(self, arg)
+			local id, msg = splitArgs('us', arg)
+			if id == nil or msg == nil then
+				sampAddChatMessage(cp('[ fADMn ]: '..self.desc..' [ /rn ID Ответ ]'), 0xc1c1c1)
+			else
+				sampSendChat('/an ' .. id .. ' ' .. msg)
+				sampSendChat('/com '.. id)
+			end
+		end
+	},
+	mmp = {
+		desc = "Выбрать победителей мероприятия",
+		func = function(self, arg)
+			local id, number = splitArgs('ud', arg)
+			if id ~= nil and number ~= nil and sampIsPlayerConnected(id) then
+				nick, name = string.match(sampGetPlayerNickname(id), "(%g+)_(%g+)")
+		
+				if number == "0" then
+					sampSendChat(string.format("/o Победитель мероприятия - %s %s[%d], поздравляю!", nick, name, tonumber(id)))
+				elseif number == "1" then
+					sampSendChat(string.format("/o Первый победитель мероприятия - %s %s[%d], поздравляю!", nick, name, id))
+				elseif number == "2" then
+					sampSendChat(string.format("/o Второй победитель мероприятия - %s %s[%d], поздравляю!", nick, name, id))
+				elseif number == "3" then
+					sampSendChat(string.format("/o Третий победитель мероприятия - %s %s[%d], поздравляю!", nick, name, id))
+				end
+			else
+				sampAddChatMessage("[ fADM ]: "..self.desc.." [ /mmp [ ID-игрока ] [ Номер ] ].", pcolor)
+				sampAddChatMessage("0 - Единственный победитель | 1 - Первый | 2 - Второй | 3 - Третий", pcolor)
+			end
+		end	
+	},
+	aiu = {
+		desc = "Уволить и сразу пригласить игрока организацию",
+		func = function(self, arg)
+		local id, frak = splitArgs('ud', arg)
+			if id and frak then
+				sampSendChat('/au '.. id)
+				sampSendChat('/ai '.. id .. ' ' ..fraction)
+			else
+				sampAddChatMessage('[ fADMn ]: {ffffff}'..self.desc..' [ /aiu ID ORGID ]', pcolor)
+			end
+		end
+	}
+}
